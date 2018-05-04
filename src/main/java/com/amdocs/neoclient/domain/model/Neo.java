@@ -15,11 +15,15 @@ import lombok.Setter;
 public class Neo {
 
 	private String neoReferenceId;
+
 	private String name;
+
 	private double absoluteMagnitudeH;
+
 	private boolean isPotentiallyHazardousAsteroid;
 
 	private EstimatedDiameter estimatedDiameter;
+
 	private CloseApproachDatum closeApproachDatum;
 
 }///:~

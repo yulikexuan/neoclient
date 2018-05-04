@@ -7,8 +7,11 @@ spring:
   # Pretty-print JSON responses
   jackson:
     serialization.INDENT_OUTPUT: true
-
+    property-naming-strategy: SNAKE_CASE
 #api.uri.scheme=http
 api:
   uri:
-    neofeed: https://api.nasa.gov/neo/rest/v1/feed
+    neofeed: https://api.nasa.gov/neo/rest/v1/feed/today
+  key:
+    name: api_key
+    value: DEMO_KEY
