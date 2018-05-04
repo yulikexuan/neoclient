@@ -1,4 +1,4 @@
-//: com.amdocs.neoclient.domain.model.CloseApproachDatum.java
+//: com.amdocs.neoclient.domain.model.CloseApproachData.java
 
 
 package com.amdocs.neoclient.domain.model;
@@ -7,14 +7,17 @@ package com.amdocs.neoclient.domain.model;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 import java.util.Date;
+import java.util.Optional;
 
 
 @Getter
 @Setter
 @NoArgsConstructor
-public class CloseApproachDatum {
+@ToString
+public class CloseApproachData {
 
 	private Date closeApproachDate;
 	private long epochDateCloseApproach;
@@ -22,5 +25,11 @@ public class CloseApproachDatum {
 
 	private RelativeVelocity relativeVelocity;
 	private MissDistance missDistance;
+
+	public Long getMissDistanceInKilo() {
+		return Optional.ofNullable(this.missDistance)
+				.map(MissDistance::getKilometers)
+				.orElseGet(() -> Long.MAX_VALUE);
+	}
 
 }///:~

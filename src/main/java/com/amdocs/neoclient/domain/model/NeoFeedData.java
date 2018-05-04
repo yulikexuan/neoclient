@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -19,7 +20,7 @@ import java.util.Map;
 public class NeoFeedData {
 
 	private int elementCount;
-	private Map<String, List<Neo>> nearEarthObjects;
+	private Map<String, List<Neo>> nearEarthObjects = new HashMap<>();
 
 	public List<Neo> getNeosForToday() {
 		return this.nearEarthObjects.values()

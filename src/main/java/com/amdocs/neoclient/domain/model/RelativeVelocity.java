@@ -4,16 +4,18 @@
 package com.amdocs.neoclient.domain.model;
 
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+
+@Getter
+@Setter
+@NoArgsConstructor
+@ToString
 public class RelativeVelocity {
 
 	private double kilometersPerSecond;
-
-	public double getKilometersPerSecond() {
-		return this.kilometersPerSecond;
-	}
-
-	public void setKilometersPerSecond(double kilometersPerSecond) {
-		this.kilometersPerSecond = kilometersPerSecond;
-	}
 
 }///:~

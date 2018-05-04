@@ -7,21 +7,23 @@ package com.amdocs.neoclient.domain.model;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
+
+import java.util.Optional;
 
 
 @Getter
 @Setter
 @NoArgsConstructor
+@ToString
 public class EstimatedDiameter {
 
     private Kilometers kilometers;
 
-    public Kilometers getKilometers() {
-        return this.kilometers;
-    }
-
-    public void setKilometers(Kilometers kilometers) {
-        this.kilometers = kilometers;
+    public Double getEstimatedDiameterMaxKilo() {
+        return Optional.ofNullable(this.kilometers)
+                .map(Kilometers::getEstimatedDiameterMax)
+                .orElseGet(() -> new Double(0));
     }
 
 }///:~
