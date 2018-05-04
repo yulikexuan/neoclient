@@ -1,0 +1,14 @@
+# logging.level.guru.springframework=debug
+logging:
+  level:
+    com.amdocs.neoclient: debug
+    # org.springframework: debug
+spring:
+  # Pretty-print JSON responses
+  jackson:
+    serialization.INDENT_OUTPUT: true
+
+#api.uri.scheme=http
+api:
+  uri:
+    neofeed: https://api.nasa.gov/neo/rest/v1/feed
