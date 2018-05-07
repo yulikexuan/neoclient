@@ -40,10 +40,10 @@ public class Neo {
 				.orElseGet(() -> new Double(0));
 	}
 
-	public Long getMissDistanceInKilo() {
+	public Double getMissDistanceInKilo() {
 		return Optional.ofNullable(this.closeApproachData.get(0))
 				.map(CloseApproachData::getMissDistanceInKilo)
-				.orElseGet(() -> Long.MAX_VALUE);
+				.orElseGet(() -> new Double(Long.MAX_VALUE));
 	}
 
 }///:~

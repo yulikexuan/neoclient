@@ -26,10 +26,10 @@ public class CloseApproachData {
 	private RelativeVelocity relativeVelocity;
 	private MissDistance missDistance;
 
-	public Long getMissDistanceInKilo() {
+	public double getMissDistanceInKilo() {
 		return Optional.ofNullable(this.missDistance)
 				.map(MissDistance::getKilometers)
-				.orElseGet(() -> Long.MAX_VALUE);
+				.orElseGet(() -> new Double(Long.MAX_VALUE));
 	}
 
 }///:~

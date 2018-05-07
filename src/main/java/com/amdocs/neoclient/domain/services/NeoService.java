@@ -81,7 +81,7 @@ public class NeoService implements INeoService {
 		return this.getNeosForToday()
 				.orElseGet(ArrayList::new)
 				.stream()
-				.max(Comparator.comparing(Neo::getMissDistanceInKilo));
+				.min(Comparator.comparing(Neo::getMissDistanceInKilo));
 	}
 
 }///:~

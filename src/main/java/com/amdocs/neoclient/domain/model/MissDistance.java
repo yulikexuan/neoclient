@@ -15,6 +15,6 @@ import lombok.ToString;
 @ToString
 public class MissDistance {
 
-	private long kilometers;
+	private double kilometers;
 
 }///:~
